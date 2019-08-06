@@ -23,11 +23,11 @@ router.get("/edit", function(req,res){
 });
 router.get("/view", function(req,res){
     console.log("reached view!");
-    res.render("../views/viewproduct");
+    res.render("../views/viewproduct",{pname:proname, price:proprice, qnty:proqtn, i:i });
 });
 router.post("/del", function(req,res){
     console.log("reached delete!");
-    res.render("../views/delproduct",{pname:proname, price:proprice, qnty:proqtn, i:i });
+    res.render("../views/delproduct");
 });
 
 /* router.get("/added", function(req,res){

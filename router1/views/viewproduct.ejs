@@ -6,25 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>View Products</title>
 </head>
-<body><center>
+<body> <!-- <form action="" method="GET"> --><center>
     <div>
         <table>
             <tr>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Quantity</td>
+                <td> <h3>Name</h3> </td>
+                <td><h3>Price</h3></td>
+                <td><h3>Quantity</h3></td>
             </tr>
-            <tr>
+            
             <%for(var j=0;j<=i;j++)
             {%>
-                <td><%=pname[j]%></td>
+                <tr></tr><td><%=pname[j]%></td>
                 <td><%=price[j]%></td>
-                <td><%=qnty[j]%></td>
+                <td><%=qnty[j]%></td></tr>
             <%}%>
             
-            </tr>
+            
 
         </table>
-    </div></center>
+    </div></center><!-- </form> -->
 </body>
 </html>
