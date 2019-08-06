@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View Products</title>
+</head>
+<body><center>
+    <div>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>Price</td>
+                <td>Quantity</td>
+            </tr>
+            <tr>
+            <%for(var j=0;j<=i;j++)
+            {%>
+                <td><%=pname[j]%></td>
+                <td><%=price[j]%></td>
+                <td><%=qnty[j]%></td>
+            <%}%>
+            
+            </tr>
+
+        </table>
+    </div></center>
+</body>
+</html>
