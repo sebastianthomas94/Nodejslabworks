@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View Employees</title>
+</head>
+<body>
+
+<table border="2">
+    <thead>
+        <th>
+            Employee ID
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Salary
+        </th>
+    </thead>
+    <tbody>
+        <%for(var i in emp){%>
+        <tr>
+            <td>
+                <%=emp[i].Eid%>
+            </td>
+            <td>
+                <%=emp[i].Name%>
+            </td>
+            <td>
+                <%=emp[i].Salary%>
+            </td>
+        </tr><%}%>
+    </tbody>
+</table>
+    
+</body>
+</html>
