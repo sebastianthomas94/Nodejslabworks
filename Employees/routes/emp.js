@@ -58,5 +58,59 @@ router.get("/vemp", function(req,res){
 });
 
 
+router.get("/uemp/:id", function(req,res){
+    console.log("update employess");console.log(req.params.id);
+    /* res.render("updateemp",{empid:req.params.id,}); */
+    emp.find({Eid:req.params.id},function(err,result){
+        if(err)
+            throw err;
+        else
+        {
+            console.log(result);
+            res.render("updateemp",{emp:result});
+        }
+    });
 
+
+});
+
+
+
+router.post("/uemp/submit", function(req,res){
+
+    var name= req.body.nname;
+    console.log("update employee detail");
+    console.log(req.body.Eid);
+    var myquery = { Eid: req.body.Eid};
+    var newvalues = { $set: { Name: req.body.nname ,Salary:req.body.nsalary} };
+
+    //console.log(req.body.nname+"--------------------------submit");
+    emp.update(myquery, newvalues, function(err, result) 
+    {
+        if (err) 
+            throw err;
+        else
+        {
+            console.log(name+"--------------------------submit");
+            console.log("1 document updated");
+            emp.find({},function(err,result)
+            {
+                    if(err)
+                        throw err;
+                    else
+                        res.render("viewemp",{emp:result});
+            });
+        }
+    });
+});
+        
+    
+    /* e1.Name=req.body.nname;
+    e1.Salary=req.body.nsal;
+    e1.save(function(err){
+        if(err)
+            throw err
+        else
+            res.send("Data send...")
+    }) */
 

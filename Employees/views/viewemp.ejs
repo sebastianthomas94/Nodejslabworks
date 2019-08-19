@@ -7,7 +7,12 @@
     <title>View Employees</title>
 </head>
 <body>
-
+<!-- <form action="/emp/uemp" method="GET"> -->
+<center>
+    <br>
+    <br>
+    <h2>List Of Employees</h2>
+    <br>
 <table border="2">
     <thead>
         <th>
@@ -18,6 +23,12 @@
         </th>
         <th>
             Salary
+        </th>
+        <th>
+            Edit
+        </th>
+        <th>
+            Delete
         </th>
     </thead>
     <tbody>
@@ -32,9 +43,18 @@
             <td>
                 <%=emp[i].Salary%>
             </td>
+            <td>
+                <!-- <input type="submit" value="Edit"> -->
+                <button type="submit" onclick="window.location.href= '/emp/uemp/<%=emp[i].Eid%>'">Edit</button>
+            </td>
+            <td>
+                    <!-- <input type="submit" value="Delete"> -->
+                    <button type="submit" onclick="window.location.href= '/emp/uemp'">Delete</button>
+            </td>
         </tr><%}%>
     </tbody>
 </table>
-    
+</center>
+<!-- </form> -->
 </body>
 </html>

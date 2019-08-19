@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update Employee Details</title>
+</head>
+<body>
+    <form action="/emp/uemp/submit" method="POST">
+    <center>
+        <h1>Update Employee Details</h1>
+        <br>
+        <h2>
+            Employee ID: <input type="text" name="Eid" id="" value="<%=emp[0].Eid%>" readonly/>
+        </h2>
+        <h2>
+            Name: <input type="text" name="nname" value="<%=emp[0].Name%>"/>
+        </h2>
+        <h2>
+            Salary: <input type="text" name="nsalary" value="<%=emp[0].Salary%>"/>
+        </h2>
+        <button type="submit">Update</button>
+
+
+    </center>
+</form>
+</body>
+</html>
